@@ -92,4 +92,5 @@
 	        return new AutoJson_Action.Builder(); // AutoJson_Action编译时期注解处理器自动生成
 	    }
 	}
-##[思维导图](./images/注解.jpg)
+##[思维导图]
+<img src="./images/annotation.jpg"/>

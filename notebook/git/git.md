@@ -1,3 +1,8 @@
+###图
+<img src="workspace.png"/><br/>
+<img src="reset.png"/>
+	
+
 	# 继续上步冲突的合并操作，即可rebase成功  
 	git rebase --continue  
 	# 如果想放弃这次合并，--continue换成--abort  
