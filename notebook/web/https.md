@@ -1,5 +1,5 @@
 ###Https
-
+在HTTP的之下加入了SSL (Secure Socket Layer)，安全的基础就靠SSL。SSL位于TCP/IP和HTTP协议之间。
 ###作用
 1. 认证用户和服务器，确保数据发送到正确的客户机和服务器；(验证证书)
 2. 加密数据以防止数据中途被窃取；（加密）
@@ -40,3 +40,5 @@
 
 ###参考
 1. [SSL/TLS协议运行机制的概述](http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html?20141021103852)
+2. [Android Https相关完全解析 当OkHttp遇到Https](http://blog.csdn.net/lmj623565791/article/details/48129405)
+3. [okhttp实现https自定义证书访问](https://github.com/hongyangAndroid/okhttp-utils)
