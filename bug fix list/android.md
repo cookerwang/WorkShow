@@ -36,8 +36,9 @@
 ----------
 	 UNEXPECTED TOP-LEVEL EXCEPTION:
 	    com.android.dx.cf.iface.ParseException: bad class file magic (cafebabe) or version (0034.0000)
-	原因：库编译所用jdk版本与当前android jdk版本不兼容所致。
-	解决方法：
+	原因：库编译所用jdk版本与当前android jdk版本不兼容所致。库与库的jdk版本不兼容等。
+	解决方法：排除该额外库引入，参考上
+	android application则：
 	compileOptions {
 	    encoding = "UTF-8"
 	    sourceCompatibility JavaVersion.VERSION_1_7

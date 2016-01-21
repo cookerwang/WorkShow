@@ -26,8 +26,8 @@
 
 ###四、java授权开源库
 1. android的webview授权访问时记得清除cookie与缓存
-2. 注意1.0.1有个multidex 重复问题。
-compile('org.apache.oltu.oauth2:org.apache.oltu.oauth2.client:1.0.0') {
+2. 注意multidex 重复问题，采用排除库方法，参加android bug fix系列
+compile('org.apache.oltu.oauth2:org.apache.oltu.oauth2.client:1.0.1') {
 	    exclude group: 'org.json', module: 'json'
 	  }  
 
