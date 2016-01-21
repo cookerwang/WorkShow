@@ -30,3 +30,21 @@
         exclude group: 'com.google.android.google-play-services'
         exclude(group: 'org.apache.httpcomponents', module: 'httpclient')
     }
+
+3. 错误：
+
+----------
+	 UNEXPECTED TOP-LEVEL EXCEPTION:
+	    com.android.dx.cf.iface.ParseException: bad class file magic (cafebabe) or version (0034.0000)
+	原因：库编译所用jdk版本与当前android jdk版本不兼容所致。
+	解决方法：
+	compileOptions {
+	    encoding = "UTF-8"
+	    sourceCompatibility JavaVersion.VERSION_1_7
+	    targetCompatibility JavaVersion.VERSION_1_7
+	  }
+
+	java module中
+	apply plugin: 'java'
+	sourceCompatibility=JavaVersion.VERSION_1_7
+	targetCompatibility=JavaVersion.VERSION_1_7

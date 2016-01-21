@@ -25,13 +25,15 @@
 <img src="images/oauth_ex.png"/>
 
 ###四、java授权开源库
-1. 注意1.0.1有个multidex 重复问题。
+1. android的webview授权访问时记得清除cookie与缓存
+2. 注意1.0.1有个multidex 重复问题。
 compile('org.apache.oltu.oauth2:org.apache.oltu.oauth2.client:1.0.0') {
 	    exclude group: 'org.json', module: 'json'
-	  }
+	  }  
 
+	String sampleState = new BigInteger(130, new SecureRandom()).toString(32);
 
-2. 源码	
+3. 源码	
 	public class Oauth2Util {
 	    public static final String SITE_URL = "https://trakt.tv";
 	    public static final String API_URL = "https://api-v2launch.trakt.tv";
@@ -133,7 +135,8 @@ compile('org.apache.oltu.oauth2:org.apache.oltu.oauth2.client:1.0.0') {
 	            .setRedirectURI(redirectUri)
 	            .setClientId(clientId)
 	            .setClientSecret(clientSecret)
-	            .buildQueryMessage();
+				.buildBodyMessage();
+	            //.buildQueryMessage();
 	    }
 	
 	    /**
