@@ -52,7 +52,7 @@
 
 4: Android Gradle Plugin版本兼容问题，gradle版本升级导致。
 
-	http://tools.android.com/tech-docs/new-build-system/version-compatibility
+	http://tools.android.com/recent查看最新。
 	改成
 	buildscript {
 	  repositories {
@@ -66,5 +66,32 @@
 	or	
 	change classpath 'com.android.tools.build:gradle:2.0.0-alpha1' to classpath 'com.android.tools.build:gradle:2.0.+'
 
+	or 
+	http://www.androiddevtools.cn/下载最新的gradle版本zip包，gradle-2.10-all.zip
+	放入~/.gradle\wrapper\dists\gradle-2.10-all下的随机字符串文件名的目录下重启即可
 
-5：
+5：添加全局国内镜像
+	gradle 初始化脚本 修改默认的repositories
+	
+	* 修改项目中的 build.gradle		
+	repositories{
+	    maven {
+	        url "http://maven.oschina.net/content/groups/public/" //开源中国的maven镜像
+	    }
+	    jcenter()
+	}
+	初始化脚本：	
+		命令行 (这个我就不说了)
+		放一个init.gradle 文件到USER_HOME/.gradle/目录下
+		放一个后缀是.gradle的文件到 USER_HOME/.gradle/init.d/ 目录下.
+		放一个后缀是.gradle的文件到 GRADLE_HOME/init.d/ 目录下.
+
+	init.gradle	
+	allprojects {
+	    repositories {
+	         maven {
+	             name "oschinaRepo"
+	             url "http://maven.oschina.net/content/groups/public/"
+	         }
+	    }
+	}
