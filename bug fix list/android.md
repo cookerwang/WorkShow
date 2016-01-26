@@ -1,5 +1,5 @@
 ###android问题解决总结
-1.两个库依赖不同版本的相同库，gradle编译冲突（Duplicate files copied in APK META-INF/maven/com.squareup.okio/okio/pom.xml File1: C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.4.0\5b72bf48563ea8410e650de14aa33ff69a3e8c35\okio-1.4.0.jar File2: F:\opensource\phphub-android\app\build\intermediates\exploded-aar\com.umeng\message\2.4.1\jars\libs\com.umeng.message.lib_v2.4.1.jar）  
+1: 两个库依赖不同版本的相同库，gradle编译冲突（Duplicate files copied in APK META-INF/maven/com.squareup.okio/okio/pom.xml File1: C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.4.0\5b72bf48563ea8410e650de14aa33ff69a3e8c35\okio-1.4.0.jar File2: F:\opensource\phphub-android\app\build\intermediates\exploded-aar\com.umeng\message\2.4.1\jars\libs\com.umeng.message.lib_v2.4.1.jar）  
    解决方法(编译排除文件)：
 
 ----------
@@ -20,7 +20,7 @@
         exclude 'META-INF/license.txt'
         exclude 'META-INF/LGPL2.1'        
     }
-2.引入某个库，排除改库中引用的库
+2: 引入某个库，排除改库中引用的库
 
 	compile ('com.uwetrottmann:trakt-java:4.5.2') {
         exclude group: 'org.json', module: 'json'
@@ -31,7 +31,7 @@
         exclude(group: 'org.apache.httpcomponents', module: 'httpclient')
     }
 
-3. 错误：
+3: 错误：
 
 ----------
 	 UNEXPECTED TOP-LEVEL EXCEPTION:
@@ -49,3 +49,22 @@
 	apply plugin: 'java'
 	sourceCompatibility=JavaVersion.VERSION_1_7
 	targetCompatibility=JavaVersion.VERSION_1_7
+
+4: Android Gradle Plugin版本兼容问题，gradle版本升级导致。
+
+	http://tools.android.com/tech-docs/new-build-system/version-compatibility
+	改成
+	buildscript {
+	  repositories {
+	      //mavenCentral()
+	      maven { url "http://maven.oschina.net/content/groups/public/" }
+	   }	 
+	}
+
+	https://jcenter.bintray.com/com/android/tools/build/gradle/查看最新版本，多刷几次
+
+	or	
+	change classpath 'com.android.tools.build:gradle:2.0.0-alpha1' to classpath 'com.android.tools.build:gradle:2.0.+'
+
+
+5：
