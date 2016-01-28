@@ -50,4 +50,4 @@
 2. [Philm项目源码分解析(1)(2)(3): 基本概念](http://codethink.me/2015/03/26/philm-source-code-analysis-1/)
 3. [开源项目Philm的MVP架构分析](http://www.lightskystreet.com/2015/02/10/philm_mvp/)
 4. [Philm.MVP 实践——UI篇](http://blog.csdn.net/ewrfedf/article/details/49635223)
-5. 
+5. [MVP模式探究总结](http://www.v2ex.com/t/212456#reply2)
