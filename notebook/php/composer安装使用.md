@@ -24,6 +24,8 @@
 
 3.保持composer自我更新，composer selfupdate
 
+4.[查看composer可用包](https://packagist.org/explore/)
+
 ###三、[composer使用](http://www.phpcomposer.com/)
 ####composer安装依赖
 1.composer install项目安装，需要编写composer.json，告知依赖包，如：
