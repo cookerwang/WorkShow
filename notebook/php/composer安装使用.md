@@ -11,8 +11,8 @@
 	echo @php "%~dp0composer.phar" %*>composer.bat
 	linux:
 	curl -sS http://install.phpcomposer.com/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
-2.修改配置(国内镜像) 
-	
+2.修改配置(国内镜像)   
+	[国内镜像](http://packagist.cn/)  
 	1. 全局配置：composer config -g repo.packagist composer http://packagist.phpcomposer.com
 	2. 局部配置，在项目中composer.json文件结尾添加：  	
 	"repositories": {

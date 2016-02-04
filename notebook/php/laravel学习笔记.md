@@ -19,7 +19,7 @@
    + php artisan serve （php artisan查看其使用方法）或 php -S localhost:8000 -t public
    + 浏览器查看：localhost:8000
    + 或使用honestead
-### 基本工作流程：Router，Views，Controllers
+###三、 基本工作流程：Router，Views，Controllers
 1.访问网站根目录的请求到来，app/Http/routes.php被执行，并返回视图。
 
 	// 匿名函数加载视图
@@ -50,3 +50,74 @@
 	1. 在routes.php中注册路由 ---> Route::get('/','ArticleController@index');
 	2. 创建对应的控制器 ---> php artisan make:controller ArticleController
 	3. 在控制器中得对于方法加载视图 --->public function index() { return view ('articles.lists'); }
+
+###四、视图传值
+######blade模板变量输出
+	{{ $title }} // 变量内容转义输出
+	{!! $title !!} // 变量内容不转义输出
+######方法1: with()方法
+	public function index() {
+        $title = '文章标题1';
+        return view('articles.lists')->with('title',$title);
+    }
+	public function index() {
+        $title = '文章标题1';
+		$content = '内容';
+        return view('articles.lists')->with(['title'=>$title, 'content'=>$cotent]);
+    }
+######方法2：直接给view()传参数
+	public function index() {
+        $title = '<span style="color: red">文章</span>标题1';
+        return view('articles.lists',['title'=>$title]);
+    }
+	public function index() {
+        $title = '<span style="color: red">文章</span>标题1';
+        $intro = '文章一的简介';
+        return view('articles.lists',[
+			'title'=>$title,
+			'introduction'=>$intro
+			]);
+######方法三：使用compact
+	public function index() {
+        $title = '<span style="color: red">文章</span>标题1';
+        $intro = '文章一的简介';
+        return view('articles.lists',compact('title','intro'));
+    }
+###五、blade基本用法
+1.@yield('content') // 占位区域content，公共部分写好，变化部分占位，供子模板改写占位  
+2.@extends('app') // 继承自app.blade.php  
+3.替换父模板中的占位区域  
+
+	@section('content')
+	<h1>{!! $title !!}</h1>
+	<p>{{ $intro }}</p>
+	@endsection 
+
+4.条件判断
+
+	@if (count($records) === 1)
+    I have one record!
+	@elseif (count($records) > 1)
+	    I have multiple records!
+	@else
+	    I don't have any records!
+	@endif
+
+	// 如果不
+	@unless (Auth::check())
+    You are not signed in.
+	@endunless
+	
+5.循环输出
+
+	public function index() {
+        $first = ['jelly','bool'];
+        return view('articles.lists',compact('first'));
+    }
+
+	@extends('app')
+	@section('content')
+	@foreach( $first as $name)
+	    <h1> {{ $name }}</h1>
+	@endforeach
+	@endsection
