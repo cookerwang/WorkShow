@@ -121,3 +121,51 @@
 	    <h1> {{ $name }}</h1>
 	@endforeach
 	@endsection
+
+###六、db与eloquent
+#####1. 数据库配置
+	config/database.php
+	.env文件
+#####2. Migration
+	// 生成migration文件，位于database/migrations/目录下
+	php artisan make:migration create_article_table --create='articles'
+	// 修改migration的up()，执行如下命令生成创建表等
+	php artisan migrate
+	// 修改down()，执行回滚命令
+	php artisan migrate:rollback
+	// 表面复数，对应model单数，首写字母大写，创建model文件
+	php artisan make:model Article
+
+	// model命令交互窗口
+	php artisan tinker
+	$article = new App\Article
+	// model相关操作看对应文档
+	$articles = App\Article::where('id', '=', '1')->get();
+	$articles = App\Article::where('id', '=', '1')->first();
+	// 查询所有
+	$articles = App\Article::all();
+	// 查找指定id数据集
+	$article = App\Article::find(1);
+	$article->content = '修改内容';
+	$article->save(); // 保存到数据库
+	// model中添加
+	protected $fillable = ['title', 'content', 'intro', 'pubished_at'];
+	$article->update(['content'=>'修改内容']);// 有效
+	App\Article::create(['title'=>'标题', 'content'=>'内容']);
+	$article->delete(); // 删除
+	App\Article::destroy(1); // 接收id或id的数组
+	App\Article::all()->toArray();
+	App\Article::all()->toJson();
+	
+
+
+#####3.创建controller
+	php artisan make:controller ArticleController --plain
+
+###七、MVC基本流程
+	1.注册路由, 首页路由：app/Http/routes.php添加Route::get('/', 'ArticleController@index');
+	2.创建控制器，php artisan make:controller ArticleController --plain
+	3.控制器中获取数据库数据（配置db，创建migration、model等，查看db与eloquent）
+	4.视图中展示数据,链接可用路由中的路径、action、url方法
+
+
