@@ -168,4 +168,29 @@
 	3.控制器中获取数据库数据（配置db，创建migration、model等，查看db与eloquent）
 	4.视图中展示数据,链接可用路由中的路径、action、url方法
 
-
+###八、使用illuminate/html
+	package与laravel关联：通过提供Service Provider和指定Facade
+	1.composer require laravelcollective/html
+	2.composer update
+    3.php artisan optimize
+	4.config/app.php中添加
+		//增加providers数组项
+		  'providers' => [
+		    // ...
+		    Collective\Html\HtmlServiceProvider::class,
+		    // ...
+		  ],
+		
+		 //增加alias数组项 
+		  'aliases' => [
+		    // ...
+		      'Form' => Collective\Html\FormFacade::class,
+		      'Html' => Collective\Html\HtmlFacade::class,
+		    // ...
+		  ],
+	5.视图文件中使用
+	  {!! Form::open('/article/create') !!} 
+	  {!! Form::label('title', '标题:') !!}
+      {!! Form::text('title', null, ['class'=>'form-control']) !!}
+	  {!! Form::close() !!}
+	
