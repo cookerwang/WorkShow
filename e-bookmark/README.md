@@ -29,6 +29,7 @@
 - [Material Design 中文版](http://design.1sters.com)
 - [Android中文API](http://www.android-doc.com/)
 - [国外模板市场](http://themeforest.net/)  
+- [HD视频（技术）](https://vimeo.com/)  
 =========[返回顶部](https://github.com/cookerwang/WorkShow/tree/master/e-bookmark)=========
 
 ---
@@ -55,7 +56,8 @@
 - [程序员客栈](http://www.proginn.com/)
 - [酷粒](http://coollist.cn/)
 - [码农网](http://www.codeceo.com/)
-
+- [优秀英文blog](https://medium.com/)
+- [fragmented podcast](http://fragmentedpodcast.com/)
 =========[返回顶部](https://github.com/cookerwang/WorkShow/tree/master/e-bookmark)=========
 
 ---
@@ -110,40 +112,40 @@
 - [Android 开源项目源码解析](https://github.com/android-cn/android-open-project-analysis)
 - [awesome-android](https://github.com/snowdream/awesome-android)
 - [阳和移动开发](http://www.mobile-open.com/)
-
+- [军火库](http://android-arsenal.com/)  
 =========[返回顶部](https://github.com/cookerwang/WorkShow/tree/master/e-bookmark)=========
 
 ---
 
 ### 5. 大神博客
-
-- [android-dev-cn国内博主](https://github.com/android-cn/android-dev-cn)
-- [android-dev-com国外博主](https://github.com/android-cn/android-dev-com)
-- [Trinea](http://www.trinea.cn/)
-- [张鸿洋](http://blog.csdn.net/lmj623565791)
-- [任玉刚](http://blog.csdn.net/singwhatiwanna/)
-- [郭霖](http://blog.csdn.net/guolin_blog/)
-- [夏安明](http://blog.csdn.net/xiaanming/)
-- [爱哥](http://blog.csdn.net/aigestudio/)
-- [傲慢的上校](http://blog.csdn.net/lilu_leo/)
-- [胡凯](http://hukai.me/)
-- [谦虚的天下](http://www.cnblogs.com/qianxudetianxia/)
-- [兰亭风雨](http://blog.csdn.net/ns_code)
-- [Mr.Simple](http://blog.csdn.net/bboyfeiyu)
-- [罗升阳](http://blog.csdn.net/luoshengyang/)
-- [邓凡平](http://www.cnblogs.com/innost/)
-- [Race604](http://www.race604.com/)
-- [stormzhang](http://stormzhang.com/)
-- [徐宜生](http://blog.csdn.net/eclipsexys)
-- [阮一峰](http://www.ruanyifeng.com/blog/)
-- [DK](http://dk-exp.com/archives/page/2/)
-- [脉脉不得语](http://www.inferjay.com)
-- [技术小黑屋](http://droidyue.com)
-- [Android Cool Posts](http://greenrobot.me)
-- [zmywly8866](http://zmywly8866.github.io)
-- [bongizmo](http://www.bongizmo.com/blog/)
-- [Cyril Mottier](http://cyrilmottier.com)
-- [悠城札记](http://www.linfuyan.com/)
+= [android100](http://fernandocejas.com/)  
+- [android-dev-cn国内博主](https://github.com/android-cn/android-dev-cn)  
+- [android-dev-com国外博主](https://github.com/android-cn/android-dev-com)  
+- [Trinea](http://www.trinea.cn/)  
+- [张鸿洋](http://blog.csdn.net/lmj623565791)  
+- [任玉刚](http://blog.csdn.net/singwhatiwanna/)  
+- [郭霖](http://blog.csdn.net/guolin_blog/)  
+- [夏安明](http://blog.csdn.net/xiaanming/)  
+- [爱哥](http://blog.csdn.net/aigestudio/)  
+- [傲慢的上校](http://blog.csdn.net/lilu_leo/)  
+- [胡凯](http://hukai.me/)  
+- [谦虚的天下](http://www.cnblogs.com/qianxudetianxia/)  
+- [兰亭风雨](http://blog.csdn.net/ns_code)  
+- [Mr.Simple](http://blog.csdn.net/bboyfeiyu)  
+- [罗升阳](http://blog.csdn.net/luoshengyang/)  
+- [邓凡平](http://www.cnblogs.com/innost/)  
+- [Race604](http://www.race604.com/)  
+- [stormzhang](http://stormzhang.com/)  
+- [徐宜生](http://blog.csdn.net/eclipsexys)  
+- [阮一峰](http://www.ruanyifeng.com/blog/)  
+- [DK](http://dk-exp.com/archives/page/2/)  
+- [脉脉不得语](http://www.inferjay.com)  
+- [技术小黑屋](http://droidyue.com)  
+- [Android Cool Posts](http://greenrobot.me)  
+- [zmywly8866](http://zmywly8866.github.io)  
+- [bongizmo](http://www.bongizmo.com/blog/)  
+- [Cyril Mottier](http://cyrilmottier.com)  
+- [悠城札记](http://www.linfuyan.com/)  
 
 =========[返回顶部](https://github.com/cookerwang/WorkShow/tree/master/e-bookmark)=========
 

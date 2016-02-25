@@ -95,3 +95,22 @@
 	         }
 	    }
 	}
+	
+6: [android-support-multidex解决Dex超出方法数的限制问题](http://blog.csdn.net/t12x3456/article/details/40837287)
+    MultiDex实现原理:Apk在运行的时候，有一个dexpathlist，而Multidex的源码中，会根据你的系统版本号对dexpathlist做修改，将所有的dex都添加到dexpathlist中.
+	build.gradle:
+	android {  
+		defaultConfig {  
+			// Enabling multidex support.  
+			multiDexEnabled true  
+		}  
+	}  
+	dependencies {  compile 'com.google.android:multidex:0.1'}  
+	
+	Application中覆盖attachBaseContext方法：
+	@Override  
+    protected void attachBaseContext(Context base) {  
+        super.attachBaseContext(base);  
+        MultiDex.install(this);  
+    }  
+	

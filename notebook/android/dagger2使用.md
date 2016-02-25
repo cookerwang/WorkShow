@@ -22,7 +22,10 @@
 	    // ....
 	    compile "com.google.dagger:dagger:$Dagger2_Version"
 	    apt "com.google.dagger:dagger-compiler:$Dagger2_Version"	
+		
 		compile 'org.glassfish:javax.annotation:10.0-b28' 
+		或
+		provided 'javax.annotation:jsr250-api:1.0'
 		// Dagger 2 中会用到@Generated注解（后面讲），而javax.anotation.generated在java 6及以上的版本中都有，在Android API 中是没有
 	}
 
@@ -429,3 +432,4 @@ ActivityComponent：生命周期跟Activity一样的组件，这里提供了inje
 3. [详解dagger 2](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0519/2892.html)
 4. [dagger2 使用](http://www.jianshu.com/p/c2feb21064bb)
 5. [使用Dagger 2进行依赖注入](http://codethink.me/2015/08/06/dependency-injection-with-dagger-2/?utm_source=tuicool&utm_medium=referral)
+6. [优秀英文dagger2理解](http://fernandocejas.com/2015/04/11/tasting-dagger-2-on-android/)
