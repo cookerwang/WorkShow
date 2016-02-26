@@ -168,7 +168,7 @@
 	3.控制器中获取数据库数据（配置db，创建migration、model等，查看db与eloquent）
 	4.视图中展示数据,链接可用路由中的路径、action、url方法
 
-###八、使用illuminate/html
+###八、使用laravelcollective/html
 	package与laravel关联：通过提供Service Provider和指定Facade
 	1.composer require laravelcollective/html
 	2.composer update
@@ -194,3 +194,7 @@
       {!! Form::text('title', null, ['class'=>'form-control']) !!}
 	  {!! Form::close() !!}
 	
+###九、小知识点
+	1.queryScope: 查询语句，创建方法，model中添加public function scopePublished($query) { return $query->where('published_at', '<=', Carbon::now()); },则在controller中可用Article::all()->published()->get();
+	2.setAttribute: 数据保存前预处理, 对published_at保存前处理，model中添加public function setPublishedAtAttribute($date) {}
+	3.model中添加protected $dates = ['published_at']，则published_at以Carbon对象存在
