@@ -54,3 +54,50 @@
 	assertThat( testedDouble, closeTo( 20.0, 0.5 ) );
 	 
 	//hasItem匹配符表明被测的迭代对象含有元素element项则测试通过assertThat(iterableObject, hasItem (element));
+
+
+###Table 1. Annotations
+
+######@Test public void method():	  
+Annotation @Test identifies that this method is a test method.
+
+######@Before public void method():
+Will perform the method() before each test. This method can prepare the test environment, e.g. read input data, initialize the class)
+
+######@After public void method():	Test method must start with test
+	
+######@BeforeClass public void method()	
+Will perform the method before the start of all tests. This can be used to perform time intensive activities for example be used to connect to a database
+
+######@AfterClass public void method()	
+Will perform the method after all tests have finished. This can be used to perform clean-up activities for example be used to disconnect to a database
+	
+######@Ignore	
+Will ignore the test method, e.g. useful if the underlying code has been changed and the test has not yet been adapted or if the runtime of this test is just to long to be included.
+	
+######@Test(expected=IllegalArgumentException.class)	
+Tests if the method throws the named exception
+
+######@Test(timeout=100)	
+Fails if the method takes longer then 100 milliseconds
+
+####Table 2. Test methods
+######fail(String)	
+Let the method fail, might be usable to check that a certain part of the code is not reached.
+
+######assertTrue(true);	True
+
+######assertsEquals([String message], expected, actual)	
+Test if the values are the same. Note: for arrays the reference is checked not the content of the arrays
+
+######assertsEquals([String message], expected, actual, tolerance)	Usage for float and double; the tolerance are the number of decimals which must be the same
+
+######assertNull([message], object)	Checks if the object is null
+
+######assertNotNull([message], object)	Check if the object is not null
+
+######assertSame([String], expected, actual)	Check if both variables refer to the same object
+
+######assertNotSame([String], expected, actual)	Check that both variables refer not to the same object
+
+######assertTrue([message], boolean condition)	Check if the boolean condition is true.

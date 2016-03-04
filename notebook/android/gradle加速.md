@@ -37,3 +37,12 @@
 2. Run the gradle build profile tool;
 3. Stick to essential module dependencies (based on the profile tool results);
 4. Skip unessencial gradle tasks
+
+###3.项目根目录gradle.properties
+	org.gradle.daemon=true
+	org.gradle.jvmargs=-Dfile.encoding=UTF-8
+	org.gradle.parallel=true
+	org.gradle.configureondemand=true
+
+###参考
+1.[https://medium.com/@shelajev/6-tips-to-speed-up-your-gradle-build-3d98791d3df9#.ksr8btgzy](https://medium.com/@shelajev/6-tips-to-speed-up-your-gradle-build-3d98791d3df9#.ksr8btgzy)

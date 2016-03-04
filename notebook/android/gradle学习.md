@@ -33,3 +33,7 @@
 7. assemble还可以和productFlavors结合使用，具体见多渠道打包解释。
 8. gradlew installRelease Release模式打包并安装
 9. gradlew uninstallRelease 卸载Release模式包
+
+###五、[gradle插件查找地址]
+1. [https://plugins.gradle.org/](https://plugins.gradle.org/)
+2. [https://bintray.com/gradle/gradle-plugins](https://bintray.com/gradle/gradle-plugins)
