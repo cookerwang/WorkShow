@@ -216,7 +216,7 @@
 	2.setAttribute: 数据保存前预处理, 对published_at保存前处理，model中添加public function setPublishedAtAttribute($date) {}
 	3.model中添加protected $dates = ['published_at']，则published_at以Carbon对象存在
 	4.Route::resource('article', 'ArticleController');
-	Route::resource()里面定义了相关路由，同Route::auth()一样封装了登陆、注册等路由信息,php artisan make:auth, Controller::__construct()里面$this->middleware('auth');,则访问该控制器的页面使用auth中间件
+	Route::resource()里面定义了相关路由，同Route::auth()一样封装了登陆、注册等路由信息,php artisan make:auth, Controller::__construct()里面$this->middleware('auth');,则访问该控制器的页面使用auth中间件，$request->user()获得user对象
 	php artisan make:controller ArticleController // 一定得这样创建controller
 	<?php
 		class ArticleController extends Controller {
