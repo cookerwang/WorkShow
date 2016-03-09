@@ -44,5 +44,13 @@
 	org.gradle.parallel=true
 	org.gradle.configureondemand=true
 
+###4.总结
+1. Enable Configuration on Demand.
+2. Use Gradle Daemon.
+3. Newer versions of Gradle are faster, also Java 1.8 is faster than 1.6. Upgrade!
+4. Avoid doing expensive things during the configuration phase.
+5. Don’t use dynamic dependencies (“x.y.+”).
+6. Parallelize the build.
+
 ###参考
 1.[https://medium.com/@shelajev/6-tips-to-speed-up-your-gradle-build-3d98791d3df9#.ksr8btgzy](https://medium.com/@shelajev/6-tips-to-speed-up-your-gradle-build-3d98791d3df9#.ksr8btgzy)

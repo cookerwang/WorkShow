@@ -37,3 +37,6 @@
 ###五、[gradle插件查找地址]
 1. [https://plugins.gradle.org/](https://plugins.gradle.org/)
 2. [https://bintray.com/gradle/gradle-plugins](https://bintray.com/gradle/gradle-plugins)
+
+###六、(查看gradle最新版本)(http://gradle.org/gradle-download/)
+gradle/wrapper/gradle-wrapper.properties中修改其版本号为最新版本
