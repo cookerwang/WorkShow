@@ -194,7 +194,54 @@
       {!! Form::text('title', null, ['class'=>'form-control']) !!}
 	  {!! Form::close() !!}
 	
+	6.表单验证
+	  php artisan make:request StoreArticleRequest
+      app/Http/Requests/StoreArticleRequest.php中添加验证规则
+	  或
+	  controller中$this->validate($request, [验证规则]
+	  或
+	  $validator = Validator::make($input, ['title' => 'required|min:3', 'body' => 'required']); 
+	7.表单绑定
+	  Form::model('$article', ['url'=>'/article/update'])
+	8.错误信息显示，路由需要定义在['middleware' => ['web']]组中
+	@if( $errors->any() )
+    <ul class="list-group">
+        @foreach( $errors->all() as $error )
+            <li class="list-group-item list-group-item-danger">{{ $error }}</li>
+        @endforeach
+    </ul>
+@endif
 ###九、小知识点
 	1.queryScope: 查询语句，创建方法，model中添加public function scopePublished($query) { return $query->where('published_at', '<=', Carbon::now()); },则在controller中可用Article::all()->published()->get();
 	2.setAttribute: 数据保存前预处理, 对published_at保存前处理，model中添加public function setPublishedAtAttribute($date) {}
 	3.model中添加protected $dates = ['published_at']，则published_at以Carbon对象存在
+	4.Route::resource('article', 'ArticleController');
+	Route::resource()里面定义了相关路由，同Route::auth()一样封装了登陆、注册等路由信息,php artisan make:auth, Controller::__construct()里面$this->middleware('auth');,则访问该控制器的页面使用auth中间件，$request->user()获得user对象
+	php artisan make:controller ArticleController // 一定得这样创建controller
+	<?php
+		class ArticleController extends Controller {
+			public function index() {
+		        return 'index';
+		    }
+		
+		    public function show($id) {
+		        return $id;
+		    }
+		
+		    public function store(Request $request) {
+		        return $request->all();
+		    }
+		    public function edit($id) {
+		        return $id;
+		    }
+		
+		    public function update($id) {
+		        return $id;
+		    }
+		
+		    public function destroy($id) {
+		        return $id;
+		    }
+		}
+		?>
+		php artisan route:list
