@@ -40,3 +40,12 @@
 
 ###六、(查看gradle最新版本)(http://gradle.org/gradle-download/)
 gradle/wrapper/gradle-wrapper.properties中修改其版本号为最新版本
+
+###七、gradle版本升级:[http://tools.android.com/recent](http://tools.android.com/recent)查看最新版本，[候选发布版本http://gradle.org/release-candidate/](http://gradle.org/release-candidate/)，[版本号查看](https://jcenter.bintray.com/com/android/tools/build/gradle/)
+方法一：gradle/wrapper/gradle.properties文件中，打开对应网址[https://services.gradle.org/distributions](https://services.gradle.org/distributions)，找到新版本，修改其版本号
+方法二：根目录build.gradle中添加任务，执行gradle wrapper命令：
+
+	task wrapper(type: Wrapper) {  
+	  gradleVersion = "2.0-rc-2"  
+	}    
+方法三：gradle wrapper --gradle-version 2.12-rc-1
