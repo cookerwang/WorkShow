@@ -48,4 +48,6 @@ gradle/wrapper/gradle-wrapper.properties中修改其版本号为最新版本
 	task wrapper(type: Wrapper) {  
 	  gradleVersion = "2.0-rc-2"  
 	}    
-方法三：gradle wrapper --gradle-version 2.12-rc-1
+方法三：gradle wrapper --gradle-version 2.12-rc-1]
+
+[gradle编译版本查看](http://jcenter.bintray.com/com/android/tools/build/gradle-core/)
