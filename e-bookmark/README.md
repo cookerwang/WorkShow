@@ -35,6 +35,7 @@
 ---
 
 ### 2. 技术社区
+- [android技术博客周刊](http://www.androidblog.cn/)
 - [优秀入门系列教程](http://www.tutorialspoint.com/)
 - [android devdoc](http://androiddoc.qiniudn.com/)
 - [eoe Android社区](http://www.eoeandroid.com/)
